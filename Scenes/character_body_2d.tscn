@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://btrrda74puxcu"]
+
+[ext_resource type="Script" uid="uid://gr0huv8xqqq1" path="res://Scenes/character_body_2d.gd" id="1_88kja"]
+[ext_resource type="Texture2D" uid="uid://bbpo680hayurb" path="res://Pictures/Driada/Idle-1.png" id="1_ymxaj"]
+[ext_resource type="Texture2D" uid="uid://cpbmqtbmki38x" path="res://Pictures/Obstacles/Death_screen.png" id="3_it8n0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqmel"]
+radius = 12.0
+height = 48.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1528758287]
+script = ExtResource("1_88kja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1873003347]
+texture = ExtResource("1_ymxaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=913794947]
+shape = SubResource("CapsuleShape2D_mqmel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1958435909]
+layer = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1868415315]
+position = Vector2(585, 312)
+scale = Vector2(0.43970585, 0.4853257)
+texture = ExtResource("3_it8n0")

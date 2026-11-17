@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bptdsssg7o3wk"]
+
+[ext_resource type="Texture2D" uid="uid://lmn161o5hbll" path="res://Pictures/Obstacles/Main_menu.png" id="1_hnp60"]
+[ext_resource type="Script" uid="uid://bxphrdekhb1kw" path="res://Scripts/authors_scene.gd" id="1_iutdf"]
+[ext_resource type="AudioStream" uid="uid://dym15usaf303w" path="res://Sounds/Music/Pixel Canopy (Heavy Bass).mp3" id="2_iutdf"]
+[ext_resource type="AudioStream" uid="uid://d0tcqsd6vdkp6" path="res://Sounds/Music/Moonlit Grove1.mp3" id="3_2f8s5"]
+[ext_resource type="AudioStream" uid="uid://daa2w8i4rn82o" path="res://Sounds/Music/Pixel Canopy.mp3" id="4_yptpx"]
+[ext_resource type="AudioStream" uid="uid://hrgw2jgk5hrv" path="res://Sounds/Music/Moonlit Grove.mp3" id="5_276m2"]
+[ext_resource type="AudioStream" uid="uid://242mab8bxh7x" path="res://Sounds/Music/Pixel Glade1.mp3" id="6_uthmo"]
+[ext_resource type="AudioStream" uid="uid://bubnf3goxybks" path="res://Sounds/Music/Pixel Glade.mp3" id="7_nlijc"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_hqd2x"]
+shuffle = true
+loop = false
+stream_count = 6
+stream_0 = ExtResource("2_iutdf")
+stream_1 = ExtResource("3_2f8s5")
+stream_2 = ExtResource("4_yptpx")
+stream_3 = ExtResource("5_276m2")
+stream_4 = ExtResource("6_uthmo")
+stream_5 = ExtResource("7_nlijc")
+
+[node name="Authors_scene" type="CanvasLayer" unique_id=625016706]
+script = ExtResource("1_iutdf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=618829468]
+position = Vector2(591, 334)
+texture = ExtResource("1_hnp60")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=905204449]
+stream = SubResource("AudioStreamPlaylist_hqd2x")
+autoplay = true
+
+[node name="Back_button" type="Button" parent="." unique_id=408468815]
+offset_left = 524.0
+offset_top = 527.0
+offset_right = 594.0
+offset_bottom = 558.0
+scale = Vector2(2.28, 1.3599999)
+text = "Назад"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=966472579]
+offset_left = 187.0
+offset_top = 208.0
+offset_right = 227.0
+offset_bottom = 248.0
+scale = Vector2(21.504768, 3.4634578)
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.5882353)
+
+[node name="Label" type="Label" parent="." unique_id=518920618]
+offset_left = 189.99998
+offset_top = 210.0
+offset_right = 1248.0
+offset_bottom = 311.0
+scale = Vector2(0.8000006, 1.1199982)
+text = "🎮 Кто делает эту игру?
+🧠 Идея и разработка: Polina Lozhka — главный мозг проекта, кодер и человек, который тащит всё это добро вперёд!
+🧭 Наставник: Diamond — наш мудрый ментор, помогает ловить баги, разруливать сложные моменты и не словить выгорание.
+🎨 Графика и ассеты: взяты с opengameart.org — отдельный респект комьюнити за крутые материалы и открытый доступ к арту!"
+horizontal_alignment = 1

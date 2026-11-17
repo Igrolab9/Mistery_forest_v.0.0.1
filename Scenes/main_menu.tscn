@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dls8x8kpw3l44"]
+
+[ext_resource type="Texture2D" uid="uid://lmn161o5hbll" path="res://Pictures/Obstacles/Main_menu.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://ddnv551oglqgk" path="res://Scripts/main_menu.gd" id="1_yhxw7"]
+[ext_resource type="AudioStream" uid="uid://dym15usaf303w" path="res://Sounds/Music/Pixel Canopy (Heavy Bass).mp3" id="2_cp0ys"]
+[ext_resource type="AudioStream" uid="uid://d0tcqsd6vdkp6" path="res://Sounds/Music/Moonlit Grove1.mp3" id="3_yhxw7"]
+[ext_resource type="AudioStream" uid="uid://daa2w8i4rn82o" path="res://Sounds/Music/Pixel Canopy.mp3" id="4_trj04"]
+[ext_resource type="AudioStream" uid="uid://hrgw2jgk5hrv" path="res://Sounds/Music/Moonlit Grove.mp3" id="5_16hvj"]
+[ext_resource type="AudioStream" uid="uid://242mab8bxh7x" path="res://Sounds/Music/Pixel Glade1.mp3" id="6_vr1f0"]
+[ext_resource type="AudioStream" uid="uid://bubnf3goxybks" path="res://Sounds/Music/Pixel Glade.mp3" id="7_t1dhk"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_5egv6"]
+shuffle = true
+loop = false
+stream_count = 6
+stream_0 = ExtResource("2_cp0ys")
+stream_1 = ExtResource("3_yhxw7")
+stream_2 = ExtResource("4_trj04")
+stream_3 = ExtResource("5_16hvj")
+stream_4 = ExtResource("6_vr1f0")
+stream_5 = ExtResource("7_t1dhk")
+
+[node name="Main_menu" type="CanvasLayer" unique_id=1288478538]
+script = ExtResource("1_yhxw7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647648211]
+position = Vector2(581.00006, 334)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_28flt")
+
+[node name="Start_game_button" type="Button" parent="." unique_id=728312291]
+offset_left = 504.0
+offset_top = 233.0
+offset_right = 612.0
+offset_bottom = 264.0
+scale = Vector2(1.5199951, 1.4)
+text = "Начать игру"
+
+[node name="Authors_scene_button" type="Button" parent="." unique_id=2108284210]
+offset_left = 507.0
+offset_top = 301.0
+offset_right = 577.0
+offset_bottom = 332.0
+scale = Vector2(2.28, 1.3599999)
+text = "Авторы"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1626422626]
+stream = SubResource("AudioStreamPlaylist_5egv6")
+autoplay = true
